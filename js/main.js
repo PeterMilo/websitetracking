@@ -30,58 +30,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form validation
-    const contactForm = document.querySelector('#contact-form');
+    // Form submission handler
+    const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form fields
-            const name = document.querySelector('#name');
-            const email = document.querySelector('#email');
-            const message = document.querySelector('#message');
-            let isValid = true;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const message = document.getElementById('message').value;
+            
+            // Create email body
+            const emailBody = `
+Navn: ${name}
+Email: ${email}
+Virksomhed: ${company}
 
-            // Basic validation
-            if (!name.value.trim()) {
-                showError(name, 'Name is required');
-                isValid = false;
-            } else {
-                removeError(name);
-            }
-
-            if (!email.value.trim()) {
-                showError(email, 'Email is required');
-                isValid = false;
-            } else if (!isValidEmail(email.value)) {
-                showError(email, 'Please enter a valid email address');
-                isValid = false;
-            } else {
-                removeError(email);
-            }
-
-            if (!message.value.trim()) {
-                showError(message, 'Message is required');
-                isValid = false;
-            } else {
-                removeError(message);
-            }
-
-            // If form is valid, submit it (you would typically send to a server here)
-            if (isValid) {
-                // Simulate form submission
-                const submitButton = contactForm.querySelector('button[type="submit"]');
-                submitButton.textContent = 'Sending...';
-                submitButton.disabled = true;
-
-                // Simulate API call
-                setTimeout(() => {
-                    alert('Thank you for your message! We will get back to you soon.');
-                    contactForm.reset();
-                    submitButton.textContent = 'Send Message';
-                    submitButton.disabled = false;
-                }, 1500);
-            }
+Besked:
+${message}
+            `.trim();
+            
+            // Create mailto link
+            const mailtoLink = `mailto:peter@websitetracking.dk?subject=Ny henvendelse fra ${name}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Clear form
+            contactForm.reset();
         });
     }
 });

@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kontakt WebTrack Pro for professionel rådgivning om webtracking og analyse">
+    <meta name="description" content="Kontakt Website Tracking for professionel rådgivning om webtracking og analyse">
     <meta name="keywords" content="kontakt, webanalyse rådgivning, webtracking kontakt">
-    <title>Kontakt | WebTrack Pro</title>
+    <title>Kontakt | Website Tracking</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -14,12 +21,14 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">WebTrack Pro</a>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Website Tracking Logo" class="logo-image">
+                    <span class="logo-text">websitetracking.dk</span>
+                </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html">Forside</a></li>
                 <li><a href="services.html">Ydelser</a></li>
-                <li><a href="testimonials.html">Udtalelser</a></li>
                 <li><a href="contact.html" class="active">Kontakt</a></li>
             </ul>
             <div class="hamburger">
@@ -30,13 +39,7 @@
         </nav>
     </header>
 
-    <!-- Contact Hero Section -->
-    <section class="hero contact-hero">
-        <div class="hero-content">
-            <h1>Kontakt os</h1>
-            <p>Skal vi tage en snak om, hvordan vi kan optimere jeres webtracking og analyse?</p>
-        </div>
-    </section>
+    
 
     <!-- Contact Section -->
     <section class="contact-section">
@@ -47,35 +50,30 @@
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <h3>Adresse</h3>
-                        <p>123 Analytics Street<br>Tech City, TC 12345</p>
+                        <p>Aarhus, Danmark</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
                     <div>
                         <h3>Telefon</h3>
-                        <p>(555) 123-4567</p>
+                        <p><a href="tel:+4528456996">+45 28 45 69 96</a></p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
                     <div>
                         <h3>Email</h3>
-                        <p>info@webtrackpro.com</p>
+                        <p><a href="mailto:peter@websitetracking.dk">peter@websitetracking.dk</a></p>
                     </div>
-                </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
 
             <div class="contact-form">
-                <h2>Skriv til os</h2>
+                <h2>Send en besked</h2>
                 <form id="contact-form">
                     <div class="form-group">
-                        <label for="name">Fulde navn</label>
+                        <label for="name">Navn</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
@@ -101,16 +99,16 @@
         <h2>Ofte stillede spørgsmål</h2>
         <div class="faq-grid">
             <div class="faq-item">
-                <h3>Hvor hurtigt kan I starte?</h3>
-                <p>Vi kan typisk gå i gang med analysen 1-2 hverdage efter bekræftelse af opgaven.</p>
+                <h3>Hvor hurtigt kan du starte?</h3>
+                <p>Jeg kan typisk gå i gang 1-2 hverdage efter bekræftelse af opgaven.</p>
             </div>
             <div class="faq-item">
-                <h3>Tilbyder I løbende support?</h3>
-                <p>Ja, vi tilbyder kontinuerlig support og overvågning, tilpasset jeres behov.</p>
+                <h3>Tilbyder du løbende support?</h3>
+                <p>Ja, jeg tilbyder kontinuerlig support og overvågning, tilpasset behov.</p>
             </div>
             <div class="faq-item">
-                <h3>Hvordan arbejder I typisk?</h3>
-                <p>Vi starter med en indledende samtale, efterfulgt af analyse, implementering og faste opfølgningsmøder.</p>
+                <h3>Hvordan arbejder du typisk?</h3>
+                <p>Vi starter med en indledende samtale, efterfulgt af vurdering/analyse af opgaven, implementering og til sidst et opfølgningsmøde.</p>
             </div>
         </div>
     </section>
@@ -119,23 +117,21 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>WebTrack Pro</h4>
-                <p>Eksperter i webtracking og analysebaseret rådgivning</p>
+                <h4>Websitetracking.dk</h4>
+                <p>Effektiv opsætning af tracking og webanalyse</p>
             </div>
             <div class="footer-section">
                 <h4>Kontakt</h4>
-                <p>Email: info@webtrackpro.com</p>
-                <p>Telefon: (555) 123-4567</p>
+                <p>Email: <a href="mailto:peter@websitetracking.dk">peter@websitetracking.dk</a></p>
+                <p>Tlf: <a href="tel:+4528456996">+45 28 45 69 96</a></p>
             </div>
             <div class="footer-section">
                 <h4>Adresse</h4>
-                <p><i class="fas fa-map-marker-alt"></i> København, Danmark</p>
-                <p>Nørrebrogade 42</p>
-                <p>2200 København N</p>
+                <p><i class="fas fa-map-marker-alt"></i> Aarhus, Danmark</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 WebTrack Pro. Alle rettigheder forbeholdes.</p>
+            <p>&copy; 2025 Websiteracking.dk. Alle rettigheder forbeholdes.</p>
         </div>
     </footer>
 
